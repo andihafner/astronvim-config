@@ -20,4 +20,10 @@ return {
     require("nvim-tree").setup {}
   end,
   },
+  {
+    "AstroNvim/astroui",
+    opts = {
+      colorscheme = "solarized",
+    },
+  },
 }
