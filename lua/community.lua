@@ -10,15 +10,13 @@ return {
   { import = "astrocommunity.pack.lua" },
   -- import/override with your plugins folder
   {
-  "nvim-tree/nvim-tree.lua",
-  version = "*",
-  lazy = false,
-  dependencies = {
-    "nvim-tree/nvim-web-devicons",
-  },
-  config = function()
-    require("nvim-tree").setup {}
-  end,
+    "nvim-tree/nvim-tree.lua",
+    version = "*",
+    lazy = false,
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function() require("nvim-tree").setup {} end,
   },
   {
     "AstroNvim/astroui",
@@ -27,7 +25,7 @@ return {
     },
   },
   -- ahc remap leader e key from neo-tree to nvim-tree file explorer
-   {
+  {
     "nvim-neo-tree/neo-tree.nvim",
     keys = {
       { "<leader>e", false },
@@ -38,11 +36,9 @@ return {
     keys = {
       {
         "<leader>e",
-        function()
-          require("nvim-tree.api").tree.toggle()
-        end,
+        function() require("nvim-tree.api").tree.toggle() end,
         desc = "Toggle Explorer",
       },
     },
-  }, 
+  },
 }
